@@ -14,6 +14,21 @@ header{
     display: block;
     font-size: 30px;
     margin: 0px;
-    text-align: 
+    text-align: center;
+}
 
+#cart{
+    padding: 10px;
+    border: 2px solid darkcyan;
+    width: 600px;
+    margin: 0 auto;
+}
+
+#cart > selct,
+#cart > input{
+    margin-right: 16px;
+}
+
+output{
+    font-weight: 700;
 }
