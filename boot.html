@@ -11,30 +11,30 @@
   </head>
   <body>
     <header>
-      <h1>Commercial</h1>
+      <h1 class= "title">Commercial</h1>
     </header>
     <section class="container">
-        <div action="boot.html" method="GET" class="row">
+        <div class="row">
           
-          <div class="col">
+          <div class="col-12 col-sm-6 col-lg-4 option">
             <h3 class="title">Option A</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nisi molestiae aut itaque voluptatem eius, repellendus at doloremque consectetur animi perferendis autem, placeat ab dolorum magnam ipsa earum sit eveniet?</p>
-            <a class="price" href="">$19.99</a>
+            <a class="price title" href="">$19.99</a>
           </div>
           
-          <div class="col">
+          <div class="col-12 col-sm-6 col-lg-4 option"></div>
             <h3 class="title">Option B</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nisi molestiae aut itaque voluptatem eius, repellendus at doloremque consectetur animi perferendis autem, placeat ab dolorum magnam ipsa earum sit eveniet?</p>
-            <a class="price" href="">$24.99</a>
+            <a class="price title" href="">$24.99</a>
           </div>
          
-          <div class="col">
+          <div class="col-12 col-sm-6 col-lg-4 option"></div>
             <h3 class="title">Option C</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nisi molestiae aut itaque voluptatem eius, repellendus at doloremque consectetur animi perferendis autem, placeat ab dolorum magnam ipsa earum sit eveniet?</p>
-            <a class="price" href="">$29.99</a>
+            <a class="price title" href="">$29.99</a>
           </div>
           
-          <form id="cart" class="row" method="GET" action"boot.html" oninput="calculate()">
+          <form id="cart" class="row" method="GET" action"checkout.html" oninput="calculate()">
             <select name="options" id="options">
               <option value="19.99">Buy A</option>
               <option value="24.99">Buy B</option>
@@ -51,9 +51,9 @@
             let option = doc.getElementByid("option");
             let time = doc.getElementByid("time");
             let result = doc.getElementByid("result");
-            
-            
-          }
+
+            result.value = "$" + Number(parseFloat(option.value) * parseInt(time.value)) .toPrecision(5);
+                }
         </script>
 
 
