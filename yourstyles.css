@@ -13,7 +13,7 @@ header{
 .price{
     display: block;
     font-size: 30px;
-    margin: 0px;
+    margin:0 auto;
     text-align: center;
 }
 
@@ -25,7 +25,8 @@ header{
 }
 
 #cart > selct,
-#cart > input{
+#cart > input,
+#cart > output{
     width: 75px;
     margin-right: 16px;
 }
