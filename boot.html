@@ -22,37 +22,39 @@
             <a class="price title" href="">$19.99</a>
           </div>
           
-          <div class="col-12 col-sm-6 col-lg-4 option"></div>
+          <div class="col-12 col-sm-6 col-lg-4 option">
             <h3 class="title">Option B</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nisi molestiae aut itaque voluptatem eius, repellendus at doloremque consectetur animi perferendis autem, placeat ab dolorum magnam ipsa earum sit eveniet?</p>
             <a class="price title" href="">$24.99</a>
           </div>
          
-          <div class="col-12 col-sm-6 col-lg-4 option"></div>
+          <div class="col-12 col-sm-6 col-lg-4 option">
             <h3 class="title">Option C</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nisi molestiae aut itaque voluptatem eius, repellendus at doloremque consectetur animi perferendis autem, placeat ab dolorum magnam ipsa earum sit eveniet?</p>
             <a class="price title" href="">$29.99</a>
-          </div>
-          
-          <form id="cart" class="row" method="GET" action"checkout.html" oninput="calculate()">
-            <select name="options" id="options">
-              <option value="19.99">Buy A</option>
-              <option value="24.99">Buy B</option>
-              <option value="29.99">Buy C</option>
+        </div>
+        </div>
+          <form id="cart" class="row" method="GET" action="motherShip.html" oninput="calculate()">
+            Option:
+            <select name="option" id="option">
+              <option value="19.99">A</option>
+              <option value="24.99">B</option>
+              <option value="29.99">C</option>
             </select>
             Months: <input id="time" type="number" value"12" min"0">
             Total: <output id="result" name="out" for="option time"></output>
+            <input type="submit" value="submit">
           </form>
         </section>
 
         <script>
           function calculate(){
-            let doc = document
-            let option = doc.getElementByid("option");
-            let time = doc.getElementByid("time");
-            let result = doc.getElementByid("result");
+            let doc = document;
+            let option = doc.getElementById("option");
+            let time = doc.getElementById("time");
+            let result = doc.getElementById("result");
 
-            result.value = "$" + Number(parseFloat(option.value) * parseInt(time.value)) .toPrecision(5);
+            result.value = "$" + Number(parseFloat(option.value) * parseInt(time.value)).toPrecision(5);
                 }
         </script>
 
